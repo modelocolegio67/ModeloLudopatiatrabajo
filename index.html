@@ -1,144 +1,168 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ludopatía en menores — Prevención en escuelas</title>
-  <meta name="description" content="Información sobre la ludopatía en menores, señales de alerta, prevención en el ámbito escolar y recursos para familias y docentes." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ludopatía en menores</title>
   <style>
-    :root{
-      --bg:#f6f7fb; --card:#ffffff; --accent:#2b6cb0; --muted:#6b7280; --danger:#dc2626;
-      --maxw:1000px;
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    :root {
+      --color-principal: #004aad;
+      --color-secundario: #0077ff;
+      --color-fondo: #f4f6f9;
+      --texto: #222;
+      --tarjeta: #ffffff;
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,var(--bg),#eef2f7);color:#111}
-    .container{max-width:var(--maxw);margin:28px auto;padding:20px}
-    header{display:flex;gap:20px;align-items:center}
-    .logo{width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#1e90ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:22px}
-    h1{margin:0;font-size:26px}
-    p.lead{color:var(--muted);margin-top:6px}.hero{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:18px}
-.card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 20px rgba(12,21,40,0.06)}
 
-.credits{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px}
-.credits h2{font-size:22px;margin:0 0 8px}
-.credits .names{font-size:20px;font-weight:800;letter-spacing:0.6px}
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      background: var(--color-fondo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
 
-section {margin-top:18px}
-h2.section-title{font-size:18px;margin:0 0 8px}
-ul{margin:8px 0 0 18px}
+    header {
+      background: linear-gradient(90deg, var(--color-principal), var(--color-secundario));
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
 
-footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px}
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
 
-@media(max-width:880px){
-  .hero{grid-template-columns:1fr;}
-  .credits{padding:18px}
-}
+    nav {
+      background: #01306f;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-/* small accessibility helpers */
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.9rem 1.2rem;
+      display: block;
+      font-weight: 500;
+    }
 
-.button{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
-.warning{border-left:4px solid var(--danger);padding:10px 12px;background:#fff5f5;border-radius:8px}
+    nav a:hover {
+      background: #0053b8;
+    }
 
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    section {
+      background: var(--tarjeta);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    section h2 {
+      color: var(--color-principal);
+      margin-top: 0;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    footer {
+      background: var(--color-principal);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+    }
+
+    .creditos {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      section {
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="logo" aria-hidden>LP</div>
-      <div>
-        <h1>Ludopatía en menores: información y prevención para escuelas</h1>
-        <p class="lead">Guía breve para docentes, familias y estudiantes sobre qué es la ludopatía, señales de alerta y cómo actuar en el ámbito escolar.</p>
-      </div>
-    </header><div class="hero">
-  <main class="card" id="main" tabindex="0">
-    <section aria-labelledby="que-es">
-      <h2 id="que-es" class="section-title">¿Qué es la ludopatía?</h2>
-      <p>La ludopatía (o juego problemático) es una conducta donde una persona no puede controlar su impulso de jugar, aun cuando causa consecuencias negativas en su vida social, académica o familiar. En menores puede manifestarse por apuestas en línea, videojuegos con mecánicas de azar, rifas escolares que se salen de control o juegos que implican intercambio de dinero o bienes.</p>
+
+  <header>
+    <h1>Ludopatía en menores</h1>
+    <p>Conciencia y prevención desde las escuelas</p>
+  </header>
+
+  <nav>
+    <a href="#que-es">Qué es</a>
+    <a href="#causas">Causas</a>
+    <a href="#consecuencias">Consecuencias</a>
+    <a href="#prevencion">Prevención</a>
+    <a href="#creditos">Créditos</a>
+  </nav>
+
+  <main>
+    <section id="que-es">
+      <h2>¿Qué es la ludopatía?</h2>
+      <p>La ludopatía es una adicción al juego que se caracteriza por la necesidad incontrolable de apostar dinero o participar en juegos de azar, incluso cuando esto genera problemas personales o familiares. En menores, puede presentarse a través de videojuegos con apuestas, juegos en línea o sitios que ofrecen premios con dinero real.</p>
     </section>
 
-    <section aria-labelledby="senales">
-      <h2 id="senales" class="section-title">Señales de alerta en estudiantes</h2>
+    <section id="causas">
+      <h2>Causas principales</h2>
       <ul>
-        <li>Cambio brusco en el rendimiento escolar o pérdida de interés por actividades académicas.</li>
-        <li>Mentiras sobre el uso del tiempo o de dinero, falta de dinero inexplicada.</li>
-        <li>Aislamiento de amigos habituales o preferencia por jugar solo/a en línea.</li>
-        <li>Irritabilidad, ansiedad o cambios de humor cuando no puede jugar.</li>
-        <li>Uso excesivo de dispositivos durante la noche o en horario escolar.</li>
+        <li>Acceso fácil a internet y juegos con apuestas ocultas.</li>
+        <li>Publicidad constante de casinos en línea y aplicaciones.</li>
+        <li>Influencia de amigos o familiares que juegan por dinero.</li>
+        <li>Búsqueda de emociones fuertes o escape de problemas personales.</li>
       </ul>
     </section>
 
-    <section aria-labelledby="causas">
-      <h2 id="causas" class="section-title">Factores que influyen</h2>
+    <section id="consecuencias">
+      <h2>Consecuencias</h2>
+      <p>La ludopatía puede afectar la salud mental, el rendimiento escolar y las relaciones sociales. Algunos efectos comunes son:</p>
       <ul>
-        <li>Acceso fácil a juegos en línea con microtransacciones o apuestas.</li>
-        <li>Presión del grupo o imitación de adultos que apuestan.</li>
-        <li>Búsqueda de escape frente a problemas emocionales o del entorno familiar.</li>
-        <li>Falta de supervisión digital o desconocimiento de los padres/escuela sobre los riesgos.</li>
+        <li>Ansiedad, irritabilidad o depresión.</li>
+        <li>Mentiras o conflictos con la familia por dinero.</li>
+        <li>Bajo rendimiento académico.</li>
+        <li>Problemas económicos o endeudamiento.</li>
       </ul>
     </section>
 
-    <section aria-labelledby="intervencion">
-      <h2 id="intervencion" class="section-title">¿Qué puede hacer la escuela?</h2>
+    <section id="prevencion">
+      <h2>Prevención en las escuelas</h2>
+      <p>El rol de las instituciones educativas es clave para prevenir la ludopatía en menores. Algunas acciones recomendadas son:</p>
       <ul>
-        <li>Implementar charlas educativas sobre riesgos del juego y consumo responsable de tecnologías.</li>
-        <li>Capacitar a docentes para detectar señales y derivar a servicios de orientación escolar.</li>
-        <li>Políticas claras sobre uso de dispositivos y prohibición de apuestas en el ámbito escolar.</li>
-        <li>Trabajo con familias: reuniones, materiales informativos y herramientas para supervisión.</li>
-        <li>Actividades alternativas que promuevan habilidades sociales y de manejo emocional.</li>
+        <li>Organizar charlas sobre los riesgos del juego y el uso responsable de internet.</li>
+        <li>Promover actividades deportivas y recreativas sin apuestas.</li>
+        <li>Detectar señales tempranas de adicción y ofrecer acompañamiento.</li>
+        <li>Fomentar la comunicación entre docentes, alumnos y familias.</li>
       </ul>
     </section>
 
-    <section aria-labelledby="recursos">
-      <h2 id="recursos" class="section-title">Recursos y derivación</h2>
-      <p>En caso de sospecha o confirmación de un problema, la escuela puede:</p>
-      <ul>
-        <li>Derivar al equipo de orientación o psicopedagogía del establecimiento.</li>
-        <li>Informar a la familia con evidencia concreta y plan de seguimiento.</li>
-        <li>Contactar servicios locales de salud mental o líneas de prevención (consulte los recursos de su provincia/municipio).</li>
-      </ul>
-      <div class="warning" role="alert">
-        <strong>Importante:</strong> Evitar estigmatizar al estudiante. La intervención temprana y el apoyo son más efectivos que el castigo o la exposición pública.
-      </div>
+    <section id="creditos">
+      <h2>Créditos</h2>
+      <p class="creditos">Gabriel Spena Pino · Ilan Rivarola Gómez · Bautista Ávila · Vito Acuña</p>
+      <p>Trabajo de concientización realizado por estudiantes sobre los riesgos de la ludopatía en adolescentes y su prevención escolar.</p>
     </section>
-
-    <section aria-labelledby="actividades">
-      <h2 id="actividades" class="section-title">Actividades sugeridas para la escuela</h2>
-      <ul>
-        <li>Talleres de alfabetización digital y economía básica para estudiantes y familias.</li>
-        <li>Jornadas con juegos cooperativos sin apuesta, concursos creativos y clubes deportivos.</li>
-        <li>Espacios de escucha: grupos pequeños guiados por orientadores para hablar sobre riesgo y presión social.</li>
-      </ul>
-    </section>
-
   </main>
 
-  <aside class="card credits" aria-labelledby="credit-title">
-    <h2 id="credit-title">CREDITOS</h2>
-    <div class="names" aria-hidden>
-      Gabriel Spena Pino<br />
-      Ilan Rivarola Gómez<br />
-      Bautista Ávila<br />
-      Vito Acuña
-    </div>
-    <p style="margin-top:12px;color:var(--muted)">Proyecto educativo — Diseño y contenido</p>
-    <div style="margin-top:14px">
-      <a href="#main" class="button">Ir al contenido</a>
-    </div>
-  </aside>
-</div>
+  <footer>
+    <p>© 2025 - Campaña educativa sobre la ludopatía en menores</p>
+  </footer>
 
-<footer class="card" role="contentinfo">
-  <p style="margin:0 0 8px">¿Querés adaptar esta página a tu escuela? Copiá este archivo y editá el contenido según las políticas locales y los recursos disponibles.</p>
-  <small>Licencia: contenido educativo — uso no comercial.</small>
-</footer>
-
-  </div>  <script>
-    // Pequeña mejora de accesibilidad: focus visible cuando se navega con teclado
-    document.addEventListener('keydown', function(e){
-      if(e.key === 'Tab') document.body.style.outline = 'none';
-    });
-  </script></body>
+</body>
 </html>
